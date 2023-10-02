@@ -9,6 +9,7 @@
     --bright-orange: #FD9222;
     --white: #FFF;
     --dark-grey: #111;
+    --transition: 300ms linear;
 }
 
 .visually-hidden {
@@ -52,7 +53,7 @@ img {
     min-width: 320px;
     max-width: 375px;
 
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 
 @media screen and (min-width:768px) {
@@ -185,6 +186,7 @@ img {
     border-radius: 100px;
     color: var(--white);
     background-color: transparent;
+
 }
 
 .button-container {
@@ -197,6 +199,7 @@ img {
 .primary-button:hover,
 .primary-button:focus {
     background-color: var(--bright-orange);
+    transform: scale(1.1);
 }
 
 .scroll-button {
@@ -349,6 +352,41 @@ img {
     width: 100%;
 }
 
+.icon-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-item:hover .product-cover-block {
+    transform: translate(0);
+}
+
+.product-cover-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    border-radius: 15px;
+    background: #FFF;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform var(--transition);
+}
+
+.product-cover-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.54px;
+    text-transform: uppercase;
+}
+
+.product-cover-text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.28px;
+}
+
 .product-icon {
     width: 100%;
 }
@@ -408,6 +446,21 @@ img {
 
 .made-list {
     padding-left: 16px;
+}
+
+.made-item {
+    position: relative;
+}
+
+.made-item::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4C4C4C;
 }
 
 .made-item-text {
@@ -552,6 +605,7 @@ img {
     height: 41px;
 
     border-radius: 100px;
+    border-color: brown;
 }
 
 .text-button {
@@ -561,6 +615,7 @@ img {
 .sellers-button:hover,
 .sellers-button:focus {
     background-color: var(--bright-orange);
+    transform: scale(1.1);
 }
 
 @media screen and (min-width:768px) {
@@ -632,6 +687,14 @@ img {
     border: 1px solid rgba(17, 17, 17, 0.10);
     background-color: var(--white);
     padding: 56px 18px 42px 18px;
+    position: relative;
+}
+
+.loved-image {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 @media screen and (min-width:768px) and (max-width:1199px) {
@@ -669,6 +732,7 @@ img {
 .loved-button:hover,
 .loved-button:focus {
     background-color: var(--bright-orange);
+    transform: scale(1.1);
 }
 
 @media screen and (min-width:768px) {
