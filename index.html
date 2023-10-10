@@ -62,7 +62,7 @@
             of pure delight!
           </h1>
           <div class="button-container">
-            <button type="button" class="primary-button">
+            <button type="button" class="primary-button" data-modal-open>
               <span>Buy now</span>
             </button>
             <button type="button" class="primary-button">
@@ -251,15 +251,43 @@
             <ul class="product-list">
               <li class="product-item">
                 <img class="product-image" src="./images/image 8.png" alt="" />
+                <div class="chocolate-cover-block">
+                  <h3 class="chocolate-cover-title">orange</h3>
+                  <p class="chocolate-cover-text">Dark chocolate</p>
+                  <button type="button" class="chocolate-cover-button">
+                    45 UAH
+                  </button>
+                </div>
               </li>
               <li class="product-item">
                 <img class="product-image" src="./images/image 9.png" alt="" />
+                <div class="chocolate-cover-block">
+                  <h3 class="chocolate-cover-title">APPLE&CRANBERRY</h3>
+                  <p class="chocolate-cover-text">Milk chocolate</p>
+                  <button type="button" class="chocolate-cover-button">
+                    50 UAH
+                  </button>
+                </div>
               </li>
               <li class="product-item">
                 <img class="product-image" src="./images/image 10.png" alt="" />
+                <div class="chocolate-cover-block">
+                  <h3 class="chocolate-cover-title">lime&sea salt</h3>
+                  <p class="chocolate-cover-text">Dark chocolate</p>
+                  <button type="button" class="chocolate-cover-button">
+                    66 UAH
+                  </button>
+                </div>
               </li>
               <li class="product-item">
                 <img class="product-image" src="./images/image 11.png" alt="" />
+                <div class="chocolate-cover-block">
+                  <h3 class="chocolate-cover-title">pineapple</h3>
+                  <p class="chocolate-cover-text">Dark chocolate</p>
+                  <button type="button" class="chocolate-cover-button">
+                    54 UAH
+                  </button>
+                </div>
               </li>
             </ul>
           </div>
@@ -298,7 +326,7 @@
                   called the Mayans.
                 </p>
               </li>
-              <li>
+              <li style="display: block; margin: auto">
                 <button class="sellers-button">
                   <span class="text-button">Buy now</span>
                 </button>
@@ -417,6 +445,47 @@
           </nav>
         </div>
       </footer>
+      <!-- modal-window -->
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal-window">
+          <button type="button" class="modal-button" data-modal-close>x</button>
+          <h1 class="modal-title">
+            LEAVE A REVIEW ABOUT
+            <span class="highlighted-word">OUR CHOCOLATE</span>
+          </h1>
+          <form action="" class="modal-form">
+            <input
+              class="modal-input"
+              type="text"
+              required
+              placeholder="Name"
+            />
+            <input
+              class="modal-input"
+              type="text"
+              required
+              placeholder="Email"
+            />
+            <input
+              class="modal-input"
+              type="text"
+              required
+              placeholder="Phone number"
+            />
+            <div class="modal-field">
+              <textarea
+                class="modal-textarea"
+                name=""
+                placeholder="Enter text"
+              ></textarea>
+            </div>
+            <button class="modal-main-button" type="submit">
+              <span class="button-word">Send</span>
+            </button>
+          </form>
+        </div>
+      </div>
     </main>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
